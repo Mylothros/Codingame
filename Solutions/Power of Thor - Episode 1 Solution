@@ -1,0 +1,68 @@
+#include <iostream>
+#include <string>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+int main()
+{
+    int lightX; // the X position of the light of power
+    int lightY; // the Y position of the light of power
+    int initialTX; // Thor's starting X position
+    int initialTY; // Thor's starting Y position
+    string dir;
+    cin >> lightX >> lightY >> initialTX >> initialTY; cin.ignore();
+
+    // game loop
+    while (1) {
+        int remainingTurns; // The remaining amount of turns Thor can move. Do not remove this line.
+        cin >> remainingTurns; cin.ignore();
+        //checking all the possible orientations
+        if(initialTX>lightX && initialTY>lightY)
+        {
+            initialTX-=1;
+            initialTY-=1;
+            dir= "NW";    
+        }
+        else if(initialTX<lightX && initialTY<lightY)
+        {
+            initialTX+=1;
+            initialTY+=1;
+            dir= "SE";    
+        }
+        else if(initialTX<lightX && initialTY>lightY)
+        {
+            initialTX+=1;
+            initialTY-=1;
+            dir= "NE";    
+        }
+        else  if(initialTX>lightX && initialTY<lightY)
+        {
+            initialTX-=1;
+            initialTY+=1;
+            dir= "SW";    
+        }
+        else if(initialTX>lightX)
+        {
+               initialTX--;
+               dir="W";
+        }
+        else if(initialTX<lightX)
+        {
+               initialTX++; 
+               dir="E";
+        }
+        else if(initialTY<lightY)
+        {
+               initialTY++; 
+               dir="S";
+        }
+        else if(initialTY>lightY)
+        {
+               initialTY--; 
+               dir="N";
+        }
+         cout << dir << endl;
+}
+}
