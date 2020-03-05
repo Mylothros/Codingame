@@ -80,10 +80,6 @@ int main()
         LONBBB=stof(LONBB);
         //making the strings floats
         d[i]=sqrt(pow((LONA-LONBBB)*cos((LATA+LATBBB)/2),2)+ pow((LATA-LATBBB),2))*6371;//using the formula
-        if(i!=0)
-        {
-            
-        }
     }    
     double min=d[0];
     //finding the min
