@@ -1,7 +1,7 @@
 # Codingame
 C++ solutions
 
-Solutions in C++ for: www.codingame.com
+Solutions C++ for: www.codingame.com
 
 [My profile](https://www.codingame.com/profile/cf340d438dd53608e3579e948be703d88060073)
 
