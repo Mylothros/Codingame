@@ -35,7 +35,6 @@ int main()
         {
             x=x0;//holds the right boundary
             x0 -= ceil((x0-Xa)/2.0);
-            cerr<<x0<<" is "<<Xa<<endl;
         }        
         if(direction == "U" || direction == "UR" || direction == "UL")
         {
