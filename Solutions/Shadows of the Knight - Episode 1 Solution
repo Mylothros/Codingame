@@ -1,0 +1,52 @@
+#include <iostream>
+#include <string>
+#include <vector>
+#include <algorithm>
+#include <cmath>
+
+using namespace std;
+
+
+int main()
+{
+    int y; // columns
+    int x; // rows
+    cin >> x >> y; cin.ignore();//changed the x with y so it wont be confusing
+    int N; // maximum number of turns before game over.
+    cin >> N; cin.ignore();
+    cerr <<N<<endl;
+    int x0;
+    int y0;
+    cin >> x0 >> y0; cin.ignore();
+    
+    int Xa=0,Ya=0;
+
+    while (1) 
+    {
+        string direction; // the direction of the bombs from batman's current location (U, UR, R, DR, D, DL, L or UL)
+        cin >> direction; cin.ignore();
+        
+        if(direction == "R" || direction == "UR" || direction == "DR")
+        {
+            Xa=x0;//holds the left boundary
+            x0 += ceil((x-x0)/2.0);            
+        }        
+        else if(direction == "L" || direction == "UL" || direction == "DL")
+        {
+            x=x0;//holds the right boundary
+            x0 -= ceil((x0-Xa)/2.0);
+            cerr<<x0<<" is "<<Xa<<endl;
+        }        
+        if(direction == "U" || direction == "UR" || direction == "UL")
+        {
+            y=y0;//holds the bottom boundary
+            y0 -= ceil((y0-Ya)/2.0);
+        }        
+        else if(direction == "D" || direction == "DR" || direction == "DL")
+        {
+            Ya=y0;////holds the top boundary
+            y0 += ceil((y-y0)/2.0);
+        }        
+        cout << x0 <<" "<< y0 << endl;      
+    }   
+}
