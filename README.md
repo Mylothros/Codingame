@@ -7,4 +7,4 @@ Solutions C++ for: www.codingame.com
 
 Easy: ASCII ART, Chuck Norris, Defibrillators, Horse-racing Duals, MIPE Type, Mars Lander - Episode 1, Onboarding (Tutorial), Power of Thor - Episode 1, Temperatures, The Descent
 
-Medium: Shadows of the Knight - Episode 1
+Medium: Shadows of the Knight - Episode 1,  Don't Panic - Episode 1 Solution
