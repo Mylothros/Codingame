@@ -37,7 +37,7 @@ int main()
             initialTY-=1;
             dir= "NE";    
         }
-        else  if(initialTX>lightX && initialTY<lightY)
+        else if(initialTX>lightX && initialTY<lightY)
         {
             initialTX-=1;
             initialTY+=1;
