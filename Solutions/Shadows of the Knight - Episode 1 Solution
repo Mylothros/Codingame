@@ -26,25 +26,25 @@ int main()
         string direction; // the direction of the bombs from batman's current location (U, UR, R, DR, D, DL, L or UL)
         cin >> direction; cin.ignore();
         
-        if(direction == "R" || direction == "UR" || direction == "DR")
+        if(direction.find('R') != string::npos)
         {
             Xa=x0;//holds the left boundary
-            x0 += ceil((x-x0)/2.0);            
+            x0 += (x-x0)/2.0;            
         }        
-        else if(direction == "L" || direction == "UL" || direction == "DL")
+        else if(direction.find('L') != string::npos)
         {
             x=x0;//holds the right boundary
-            x0 -= ceil((x0-Xa)/2.0);
+            x0 -= (x0-Xa)/2.0;
         }        
-        if(direction == "U" || direction == "UR" || direction == "UL")
+        if(direction.find('U') != string::npos)
         {
             y=y0;//holds the bottom boundary
-            y0 -= ceil((y0-Ya)/2.0);
+            y0 -= (y0-Ya)/2.0;
         }        
-        else if(direction == "D" || direction == "DR" || direction == "DL")
+        else if(direction.find('D') != string::npos)
         {
             Ya=y0;////holds the top boundary
-            y0 += ceil((y-y0)/2.0);
+            y0 += (y-y0)/2.0;
         }        
         cout << x0 <<" "<< y0 << endl;      
     }   
