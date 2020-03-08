@@ -19,8 +19,10 @@ int main()
 
     while (1)
     {
-        int remainingTurns; // The remaining amount of turns Thor can move. Do not remove this line.
-        cin >> remainingTurns; cin.ignore();
+        int remainingTurns;
+        cin >> remainingTurns;
+        cin.ignore();
+        
         //checking all the possible orientations      
         if (lightY - currentTY > 0)
         {
