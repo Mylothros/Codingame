@@ -35,7 +35,7 @@ int main()
         string direction;
         cin >> cloneFloor >> clonePos >> direction; cin.ignore();
         
-        if((clonePos>positionelevator[cloneFloor] && direction == "RIGHT") || clonePos<positionelevator[cloneFloor] && direction == "LEFT")//if the clone moves away from the elevator
+        if((clonePos > positionelevator[cloneFloor] && direction == "RIGHT") || clonePos < positionelevator[cloneFloor] && direction == "LEFT")//if the clone moves away from the elevator
         {            
             cout << "BLOCK" << endl;
         }
