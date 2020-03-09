@@ -27,6 +27,7 @@ int main()
         cin >> elevatorFloor >> elevatorPos; cin.ignore();
         positionelevator[elevatorFloor]=elevatorPos;
     }
+    
     positionelevator[nbElevators]=exitPos;//saving the position of the exit with the elevators
     
     while (1) {
