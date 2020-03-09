@@ -35,22 +35,17 @@ int main()
         string direction;
         cin >> cloneFloor >> clonePos >> direction; cin.ignore();
         
-        if(clonePos == width-1 || clonePos == 0)//if clone is at boundaries
+        if(clonePos > positionelevator[cloneFloor] && direction == "RIGHT")//if the clone moves away from the elevator
         {            
               cout << "BLOCK" << endl;
         }
-        else if((positionelevator[cloneFloor] < positionelevator[cloneFloor-1] && direction == "LEFT")||(positionelevator[cloneFloor] > positionelevator[cloneFloor-1] && direction == "RIGHT"))//if elevator+1 is in the same direction of the elevator
+        else if(clonePos < positionelevator[cloneFloor] && direction == "LEFT")//if the clone goes away from the elevator
         {
-                cout << "WAIT" << endl;
-        }
-        else if(clonePos == positionelevator[cloneFloor-1])//if clone == elevatorposition block
-        {
-            cout << "BLOCK" << endl;
-            positionelevator[cloneFloor-1]=-10;
+                cout << "BLOCK" << endl;
         }
         else
         {
-            cout << "WAIT" << endl;    
-        }
+            cout << "WAIT" << endl;
+        }       
     }
 }
