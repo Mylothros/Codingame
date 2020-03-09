@@ -28,20 +28,19 @@ int main()
     }
     
     positionelevator[nbElevators]=exitPos;//saving the position of the exit with the elevators
+    string order;
     
     while (1) {
         int cloneFloor;
         int clonePos;
         string direction;
         cin >> cloneFloor >> clonePos >> direction; cin.ignore();
+        order = "WAIT";
         
         if((clonePos > positionelevator[cloneFloor] && direction == "RIGHT") || clonePos < positionelevator[cloneFloor] && direction == "LEFT")//if the clone moves away from the elevator
         {            
-            cout << "BLOCK" << endl;
+           order = "BLOCK";
         }
-        else
-        {
-            cout << "WAIT" << endl;
-        }       
+            cout << order << endl;      
     }
 }
