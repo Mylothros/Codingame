@@ -37,11 +37,11 @@ int main()
         
         if(clonePos > positionelevator[cloneFloor] && direction == "RIGHT")//if the clone moves away from the elevator
         {            
-              cout << "BLOCK" << endl;
+            cout << "BLOCK" << endl;
         }
         else if(clonePos < positionelevator[cloneFloor] && direction == "LEFT")//if the clone goes away from the elevator
         {
-                cout << "BLOCK" << endl;
+            cout << "BLOCK" << endl;
         }
         else
         {
