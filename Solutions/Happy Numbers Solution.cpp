@@ -18,7 +18,7 @@ int main()
         while(1)
         {
             count++;
-            for(int i=0;i<x.size();i++)
+            for(int i = 0; i < x.size(); i++)
             {      
                 u = x[i]-'0';//converting the char x[i](which is the first digit of the number) to integer
                 y += pow(u,2);//finding the sum of the squares and storing them into y
