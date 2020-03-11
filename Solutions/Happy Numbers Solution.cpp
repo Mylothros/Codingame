@@ -14,10 +14,8 @@ int main()
         string x;
         getline(cin, x);
         string j=x;
-        int count=0;
         while(1)
         {
-            count++;
             for(int i = 0; i < x.size(); i++)
             {      
                 u = x[i]-'0';//converting the char x[i](which is the first digit of the number) to integer
