@@ -64,7 +64,7 @@ int main()
     
     for(int i = 0; i < z; i++)
     {
-        if(i != 0 && a[i] == a[i-1])//optimizing the solution. After the first for if the next value is the same increment allcounts by q line 78
+        if(i != 0 && a[i] == a[i-1])//optimizing the solution. After the first for if the next value is the same increment allcounts by q -> line 78
         {
             allcounts = allcounts+q; 
         }
