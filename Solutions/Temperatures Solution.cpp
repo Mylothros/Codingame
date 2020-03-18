@@ -7,12 +7,10 @@ int main()
 {
     int n;    
     cin >> n; cin.ignore();
-    int a[n],res,res1=0,res2=0;
-    bool b=true;
+    int a[n],res,res1=0,res2=0,b=1,t;
     for (int i = 0; i < n; i++)
     {
-        int t;
-        cin >> t; cin.ignore();
+        cin >> t;
         a[i] = t;
     }
    
@@ -34,22 +32,22 @@ int main()
             else if(i == n-1)//if all a[i] < 0 then res should be the biggest negative number which is the nearest number to 0
             {
                 res =  a[i];
-                b = false;//dont check the requirements
+                b = 0;//dont check the requirements
             }
         }
-        if(b == true)//check the requirements
+        if(b == 1)//check the requirements
         {
-            if(abs(res1) > abs(res2))
+            if(res1 > abs(res2))
             {
                 res = res2;
             }
-            else if(abs(res1) < abs(res2))
+            else
             {
                 res = res1;    
             }
-            else if(abs(res1) == abs(res2))
+            if(res1 == abs(res2))
             {
-                res = abs(res1);   
+                res = res1;   
             }
         }
     }
