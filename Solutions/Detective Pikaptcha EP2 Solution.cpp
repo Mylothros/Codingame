@@ -153,12 +153,12 @@ int main()
                 }
                 if(A[bi][bj] == 'B')
                 {
-                    A[bi][bj]='1';
+                    A[bi][bj] = '1';
                     break;        
                 }
                 if(A[bi][bj-(x)] != '#' && pos == 3)
                 {
-                      A[bi][bj-(x)] =  A[bi][bj-(x)] + 1;
+                      A[bi][bj-(x)] = A[bi][bj-(x)] + 1;
                       bj = bj - x;                     
                       pos = 1 + z;
                 }            
