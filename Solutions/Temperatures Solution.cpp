@@ -6,50 +6,40 @@ using namespace std;
 int main()
 {
     int n;    
-    cin >> n; cin.ignore();
-    int a[n],res,res1=0,res2=0,b=1,t;
-    for (int i = 0; i < n; i++)
-    {
+    cin >> n;
+    
+    int result=0, result1, i, t;
+    
+    for (i = 0; i < n; i++)
+    {       
         cin >> t;
-        a[i] = t;
-    }
-   
-    if(n == 0)//if there are no temperatures
-    {
-        res = 0; 
-    }
-    else
-    {
-        sort(a, a + n);//sorting the array
-        for(int i = 0; i < n; i++)
+        
+        if(i == 0)//saving the first temperature as the result
         {
-            if(a[i] > 0)//finding the first positive temperature closest to 0
-            {
-                res1 = a[i];
-                res2 = a[i-1];
-                break;
-            }
-            else if(i == n-1)//if all a[i] < 0 then res should be the biggest negative number which is the nearest number to 0
-            {
-                res =  a[i];
-                b = 0;//dont check the requirements
-            }
+            result1 = t;
+            result = t;
         }
-        if(b == 1)//check the requirements
+        
+        if(i!=0)//checking from second temperature 
         {
-            if(res1 > abs(res2))
+            if(abs(result1) == abs(t))//if they are equal
             {
-                res = res2;
-            }
-            else
+                if(result1 == t)//if they are both negatives the result should -5
+                {
+                    result = result1;    
+                }
+                else//if one is -5 and other 5 then the result should 5
+                {
+                    result = abs(result1);
+                    result1 = abs(result1);
+                }
+            }            
+            if(abs(result1) > abs(t))//next temperature is the new result
             {
-                res = res1;    
-            }
-            if(res1 == abs(res2))
-            {
-                res = res1;   
-            }
+                result = t;
+                result1 = t;
+            }           
         }
-    }
-    cout << res << endl;
+    } 
+    cout << result;
 }
