@@ -46,6 +46,7 @@ int main()
             }
             else
             {
+                i = j - 1;
                 break;
             }    
         }   
