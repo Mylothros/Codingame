@@ -5,7 +5,8 @@ using namespace std;
 
 int funct (int *output, int *ready, string *operation, string *arg1, string *arg2, int i);
 
-int main() {
+int main()
+{
     int N;
     cin >> N; cin.ignore();
 
